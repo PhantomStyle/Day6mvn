@@ -37,7 +37,8 @@ public class App
 
         Optional<Passport> pas = Optional.of(passport);
 
-        empty.ifPresent(passport1 -> CassierHelper.findByName(passports, "qwe"));
+        CassierHelper.findByName(passports, "qwe").ifPresent(p-> System.out.println(p.toString()));
+        ;
 
         //Optional.of(ifPresent(passport1 -> CassierHelper.findByName(passports, "qwe")));
 

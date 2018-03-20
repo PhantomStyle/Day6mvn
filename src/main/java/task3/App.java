@@ -20,7 +20,7 @@ public class App {
                 .flatMap(country -> country.getCities().stream()
                         .flatMap(city -> city.getStreets().stream()
                                 .map(street -> street.getTitle())
-                                .filter(title -> title.toCharArray()[0] == 'A')
+                                .filter(title -> title.startsWith("A"))
                         ).sorted()
                 ).collect(Collectors.toList());
 
